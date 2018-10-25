@@ -1,0 +1,10 @@
+.page{
+  font-size: 16px;
+  line-height: 28px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.page text{
+  margin-bottom: 20px;
+  display: block;
+}

@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="usermotto">
+    <text class="user-motto">专业人格测试--你真的了解自己吗</text>
+  </view>
+  <view wx:if="{{!isHaveData}}">
+    <button class='mt20' bindtap='start'>开始测试</button>
+  </view>
+  <view wx:else>
+    <button class='mt20' bindtap='start'>重新测试</button>
+    <button class='mt20' bindtap='goOn'>继续测试</button>
+  </view>
+</view>

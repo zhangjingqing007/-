@@ -1,0 +1,13 @@
+<view class='containers'>
+  <button class='back {{pageIndex == 0 ? "hidden" : ""}}' bindtap='backQuestion'>上一题</button>
+  <view class='page' style='background-color:{{bgColor}};transform: translateX(-{{100 * pageIndex}}vw)'>
+    <view class='question'  wx:for="{{question}}" wx:key="{{index}}">
+      <view class='title'>{{item.title}}</view>
+      <view>
+        <button class='option' wx:for="{{item.option}}"  wx:for-index="idx" wx:for-item="itemName"  wx:key="{{idx}}"  bindtap='select' data-id='{{idx}}' data-index='{{index}}'>
+            {{itemName}}
+        </button>    
+      </view>
+    </view>
+  </view>
+</view>

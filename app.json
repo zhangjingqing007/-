@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/synopsis/index",
+    "pages/question/index",
+    "pages/analyze/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "专业人格测试",
+    "navigationBarTextStyle":"black"
+  }
+}

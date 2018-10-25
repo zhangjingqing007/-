@@ -1,0 +1,17 @@
+<view class='h1'>测试结果分析</view>
+<view class='container'>
+  <view wx:for="{{trait}}"  wx:key="{{index}}" class='tag'>{{item.title}}<small style="color:{{item.levelCN == '高' ? 'red' : item.levelCN == '低' ? '#00f' : '' }}">{{item.levelCN}}</small></view>
+</view>
+
+<view class='h2'>
+  以下将轴重分析您的低分项和高分项:
+  <view wx:for="{{trait}}" class='mt20'>
+    <view class='explain'>
+      <view class='mb10'>{{item.title}}<small style="color:{{item.levelCN == '高' ? 'red' : item.levelCN == '低' ? '#00f' : '' }}">{{item.levelCN}}</small></view>
+      <view class='mb10'>主要测评：{{item.brief}}</view>
+      <view class='mb10' wx:if="{{item.levelCN == '低'}}">解释：{{item.lowText}}</view>
+      <view class='mb10' wx:elif="{{item.levelCN == '普通'}}">解释：{{item.middleText}}</view>
+      <view wx:elif="{{item.levelCN == '高'}}">解释：{{item.highText}}</view>
+    </view>
+  </view>
+</view>
